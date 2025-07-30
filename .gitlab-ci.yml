@@ -1,0 +1,33 @@
+stages:
+  - build
+  - test
+  - deploy
+
+executar_build:
+  stage: build
+  script:
+    - echo "Installing dependencies..."
+
+rodar_build:
+  stage: build
+  script:
+    - echo "executing the build the application..."
+  
+run_test:
+  stage: test
+  script:
+    - echo "Running tests..."
+run_test_2:
+  stage: test
+  script:
+    - echo "Running tests..."
+
+deploy_app_1:
+  stage: deploy
+  script:
+    - echo "Deploying the application..."
+
+deploy_app_2:
+  stage: deploy
+  script:
+    - echo "Deploying the application..."
