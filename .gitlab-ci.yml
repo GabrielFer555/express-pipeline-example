@@ -22,6 +22,20 @@ run_test_2:
   script:
     - echo "Running tests..."
 
+create_image:
+  stage: build
+  script:
+    - echoerror "Creating Docker image..." 
+
+push_image:
+  stage: build
+  needs: 
+    - create_image
+  before_script:
+    - echo "Setting up environment..."
+  script:
+    - echo "Pushing the Docker image..."
+
 deploy_app_1:
   stage: deploy
   script:
